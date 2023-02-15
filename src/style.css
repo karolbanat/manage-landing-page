@@ -1,4 +1,40 @@
 /* Fonts generated with: https://gwfh.mranftl.com/fonts/ */
+/* be-vietnam-pro-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Be Vietnam Pro';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./fonts/be-vietnam-pro-v10-latin-regular.woff2') format('woff2'),
+		url('./fonts/be-vietnam-pro-v10-latin-regular.woff') format('woff');
+}
+/* be-vietnam-pro-italic - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Be Vietnam Pro';
+	font-style: italic;
+	font-weight: 400;
+	src: url('./fonts/be-vietnam-pro-v10-latin-italic.woff2') format('woff2'),
+		url('./fonts/be-vietnam-pro-v10-latin-italic.woff') format('woff');
+}
+/* be-vietnam-pro-500 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Be Vietnam Pro';
+	font-style: normal;
+	font-weight: 500;
+	src: url('./fonts/be-vietnam-pro-v10-latin-500.woff2') format('woff2'),
+		url('./fonts/be-vietnam-pro-v10-latin-500.woff') format('woff');
+}
+/* be-vietnam-pro-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Be Vietnam Pro';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./fonts/be-vietnam-pro-v10-latin-700.woff2') format('woff2'),
+		url('./fonts/be-vietnam-pro-v10-latin-700.woff') format('woff');
+}
 
 /* reset */
 /* https://piccalil.li/blog/a-modern-css-reset */
@@ -74,8 +110,61 @@ select {
 /* Custom properties setup */
 :root {
 	/* colours */
+	--clr-primary-100: hsl(13deg 100% 96%);
+	--clr-primary-200: hsl(9deg 100% 78%);
+	--clr-primary-300: hsl(12deg 92% 72%);
+	--clr-primary-400: hsl(12deg 88% 59%);
+	--clr-primary-500: hsl(9deg 68% 56%);
+
+	--clr-secondary-400: hsl(228deg 39% 23%);
+	--clr-secondary-450: hsl(228deg 39% 23% / 0.75);
+
+	--clr-neutral-100: hsl(0deg 0% 100%);
+	--clr-neutral-200: hsl(0deg 0% 98%);
+	--clr-neutral-300: hsl(9deg 54% 97%);
+	--clr-neutral-800: hsl(233deg 12% 13%);
+
+	--clr-error: hsl(0deg 88% 59%);
 
 	/* font */
+	--ff-primary: 'Be Vietnam Pro', sans-serif;
+
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-bold: 700;
+
+	--ff-100: 1rem;
+	--ff-200: 1.3rem;
+	--ff-300: clamp(1.4rem, 1rem + 0.5vw, 1.6rem);
+	--ff-400: 1.6rem;
+	--ff-500: clamp(3rem, 2rem + 2vw, 4rem);
+	--ff-600: 4rem;
+	--ff-700: clamp(4rem, 2.5rem + 2.5vw, 5.6rem);
+	--fz-nav-link: 1.6rem;
+
+	/* border radius */
+	--borr-200: 0.4rem;
+	--borr-pill: 100vmax;
+	--borr-circle: 50%;
+}
+
+@media only screen and (min-width: 48em) {
+	:root {
+		--fz-nav-link: 1.3rem;
+	}
+}
+
+/* Base */
+body {
+	font-family: var(--ff-primary);
+	font-size: var(--fz-400);
+	color: var(--clr-secondary-450);
+}
+
+h1,
+h3,
+h3 {
+	color: var(--clr-secondary-400);
 }
 
 /* Utility */
@@ -87,6 +176,37 @@ select {
 	height: 1px;
 	overflow: hidden;
 	white-space: nowrap;
+}
+
+.bg-primary-400 {
+	background-color: var(--clr-primary-400);
+}
+
+.bg-neutral-800 {
+	background-color: var(--clr-neutral-800);
+}
+
+.text-neutral-100 {
+	color: var(--clr-neutral-100);
+}
+
+.font-600 {
+	font-size: var(--fz-600);
+	line-height: 1.1;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-center-sm {
+	text-align: center;
+}
+
+@media only screen and (min-width: 48em) {
+	.text-center-sm {
+		text-align: start;
+	}
 }
 
 /* Layout */
