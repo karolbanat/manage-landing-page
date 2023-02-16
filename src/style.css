@@ -133,13 +133,13 @@ select {
 	--fw-medium: 500;
 	--fw-bold: 700;
 
-	--ff-100: 1rem;
-	--ff-200: 1.3rem;
-	--ff-300: clamp(1.4rem, 1rem + 0.5vw, 1.6rem);
-	--ff-400: 1.6rem;
-	--ff-500: clamp(3rem, 2rem + 2vw, 4rem);
-	--ff-600: 4rem;
-	--ff-700: clamp(4rem, 2.5rem + 2.5vw, 5.6rem);
+	--fz-100: 1rem;
+	--fz-200: 1.3rem;
+	--fz-300: clamp(1.4rem, 1rem + 0.5vw, 1.6rem);
+	--fz-400: 1.6rem;
+	--fz-500: clamp(3rem, 2rem + 2vw, 4rem);
+	--fz-600: 4rem;
+	--fz-700: clamp(4rem, 2.5rem + 2.5vw, 5.6rem);
 	--fz-nav-link: 1.6rem;
 
 	/* border radius */
@@ -161,11 +161,7 @@ body {
 	color: var(--clr-secondary-450);
 }
 
-h1,
-h3,
-h3 {
-	color: var(--clr-secondary-400);
-}
+/* Components */
 
 /* Utility */
 .visually-hidden {
@@ -176,6 +172,34 @@ h3 {
 	height: 1px;
 	overflow: hidden;
 	white-space: nowrap;
+}
+
+.skip-link {
+	/* positioning */
+	position: absolute;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	transform: translateY(-120%);
+	display: inline-block;
+	padding: 1em;
+
+	/* typography */
+	font-weight: var(--fw-bold);
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--clr-neutral-800);
+
+	/* appearance */
+	background-color: var(--clr-primary-400);
+	border-bottom-right-radius: 0.4rem;
+
+	/* other */
+	transition: transform 0.35s ease;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
 }
 
 .bg-primary-400 {
@@ -203,9 +227,21 @@ h3 {
 	text-align: center;
 }
 
+.display-none-sm {
+	display: none;
+}
+
 @media only screen and (min-width: 48em) {
 	.text-center-sm {
 		text-align: start;
+	}
+
+	.display-none-sm {
+		display: revert;
+	}
+
+	.display-none-md {
+		display: none;
 	}
 }
 
