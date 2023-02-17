@@ -580,6 +580,10 @@ body {
 	margin-block-end: clamp(9.4rem, 5rem + 10vw, 13.2rem);
 }
 
+.different {
+	margin-block: clamp(6.4rem, 4rem + 10vw, 14.5rem);
+}
+
 .cta {
 	padding-block: 9rem;
 
