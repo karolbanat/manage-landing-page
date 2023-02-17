@@ -162,9 +162,16 @@ body {
 }
 
 /* Components */
-
+/* --- headings */
 .page-heading {
 	font-size: var(--fz-700);
+	color: var(--clr-secondary-400);
+}
+
+.section-heading {
+	font-size: var(--fz-500);
+	letter-spacing: -0.02em;
+	line-height: 1.5;
 	color: var(--clr-secondary-400);
 }
 
@@ -183,6 +190,10 @@ body {
 	.page-heading,
 	.cta-heading {
 		line-height: 1.15;
+	}
+
+	.section-heading {
+		line-height: 1.1;
 	}
 }
 
@@ -324,6 +335,60 @@ body {
 		flex-direction: column;
 		gap: 2.4rem;
 	}
+}
+
+/* --- cards */
+.feature-item {
+	--number-width: 6.8rem;
+	--number-spacer: 1.2rem;
+}
+
+.feature-item__heading {
+	--heading-bg: var(--clr-primary-100);
+	margin-bottom: 0.8rem;
+	font-size: var(--fz-400);
+	letter-spacing: -0.01875em;
+	color: var(--clr-secondary-400);
+	background-color: var(--heading-bg);
+	border-radius: var(--borr-pill);
+	box-shadow: 10vw 0 0 var(--heading-bg);
+}
+
+.feature-item__heading::before {
+	counter-increment: num;
+	content: '0' counter(num);
+
+	display: inline-grid;
+	place-items: center;
+
+	min-width: var(--number-width);
+	padding-block: 0.5em;
+	margin-inline-end: var(--number-spacer);
+
+	color: var(--clr-neutral-100);
+	background-color: var(--clr-primary-400);
+	border-radius: var(--borr-pill);
+}
+
+@media only screen and (min-width: 50em) {
+	.feature-item {
+		--number-spacer: 2.4rem;
+	}
+
+	.feature-item__heading {
+		--heading-bg: revert;
+	}
+
+	.feature-item > p {
+		padding-inline-start: calc(var(--number-width) + var(--number-spacer));
+	}
+}
+
+/* --- other */
+.features-list {
+	display: grid;
+	gap: 4.8rem;
+	counter-set: num 0;
 }
 
 /* Utility */
