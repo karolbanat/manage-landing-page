@@ -476,6 +476,13 @@ body {
 	height: 74.2rem;
 }
 
+.bg-pattern--different::after {
+	top: -35rem;
+	right: -10rem;
+	width: 17rem;
+	height: 37.8rem;
+}
+
 @media only screen and (min-width: 36em) {
 	.bg-pattern--hero::after {
 		bottom: 0;
@@ -485,6 +492,15 @@ body {
 	}
 }
 
+@media only screen and (min-width: 50em) {
+	.bg-pattern--different::after {
+		top: 20rem;
+		right: auto;
+		left: -32.5rem;
+		width: 43.6rem;
+		height: 99.5rem;
+	}
+}
 /* --- text */
 .text-neutral-100 {
 	color: var(--clr-neutral-100);
