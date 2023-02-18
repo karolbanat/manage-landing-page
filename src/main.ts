@@ -1,4 +1,31 @@
+import Splide from '@splidejs/splide';
+import '@splidejs/splide/css';
 import './style.css';
+
+new Splide('.splide', {
+	start: 1,
+	arrows: false,
+	classes: {
+		pagination: 'splide__pagination slider-pagination',
+		page: 'splide__pagination__page slider-dot',
+	},
+	focus: 'center',
+	gap: '3rem',
+	padding: {
+		left: '1.6rem',
+		right: '1.6rem',
+	},
+	mediaQuery: 'min',
+	breakpoints: {
+		768: {
+			autoWidth: true,
+			padding: {
+				left: 0,
+				right: 0,
+			},
+		},
+	},
+}).mount();
 
 const navToggleButton: HTMLButtonElement = document.querySelector('#primary-nav-toggle')!;
 
