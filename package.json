@@ -1,20 +1,23 @@
 {
-  "name": "manage-landing-page",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
-  },
-  "dependencies": {
-    "@splidejs/splide": "^4.1.4"
-  }
+	"name": "manage-landing-page",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"homepage": "https://karolbanat.github.io/manage-landing-page/",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview",
+		"deploy": "gh-pages -d dist"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.13",
+		"gh-pages": "^5.0.0",
+		"postcss": "^8.4.21",
+		"typescript": "^4.9.3",
+		"vite": "^4.1.0"
+	},
+	"dependencies": {
+		"@splidejs/splide": "^4.1.4"
+	}
 }
