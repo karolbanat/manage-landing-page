@@ -16,6 +16,8 @@ new Splide('.splide', {
 		right: '1.6rem',
 	},
 	mediaQuery: 'min',
+	type: 'loop',
+	clones: 2,
 	breakpoints: {
 		768: {
 			autoWidth: true,
