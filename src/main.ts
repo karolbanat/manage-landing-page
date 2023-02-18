@@ -25,6 +25,7 @@ new Splide('.splide', {
 	},
 	mediaQuery: 'min',
 	type: 'loop',
+	live: true,
 	clones: 2,
 	breakpoints: {
 		768: {
