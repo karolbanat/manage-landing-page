@@ -365,17 +365,35 @@ body {
 }
 
 /* form */
+.form-error {
+	margin-inline-start: 1.6rem;
+	margin-block-start: 1em;
+
+	font-size: var(--fz-100);
+	font-style: italic;
+	line-height: 1;
+
+	color: var(--clr-error);
+}
+
 .sign-up-form {
 	display: flex;
+	align-items: flex-start;
 	flex-wrap: wrap;
 	gap: 0.8rem;
 }
 
-.sign-up-form input[type='email'] {
-	flex: 1;
+.input-group.error input {
+	outline: 2px solid var(--clr-error);
+}
 
+.input-group:not(.error) .form-error {
+	display: none;
+}
+
+.sign-up-form input[type='email'] {
 	padding-inline: 1.6rem;
-	padding-block: 1em;
+	padding-block: 0.875em;
 	min-width: 20rem;
 
 	font-size: var(--fz-200);
